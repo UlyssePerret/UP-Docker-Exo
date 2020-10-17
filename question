@@ -1,0 +1,89 @@
+
+--------------
+Réponse du 16 octobre
+Bonjour Ulysse,
+
+Comme je l'ai indiqué sur le caanal Discord en début de semaine, je te prie de bien vouloir excuser ce contretemps.
+
+Comment mettre un Dockerfile dans le docker hub ?
+Le site hub.docker.com est un opérateur de registre d'images Docker (ie. dépôt d'images).
+A proprement parler, tu ne "mets" pas de Dockerfile sur hub.docker.com, mais tu publies une image construite à partir de ce Dockerfile.
+Il convient :
+de créer un compte,
+de se connecter sur son poste par la commande docker login
+de publier l'image que l'on a construite par docker push [image][:tag]
+notons qu'il n'est pas nécessaire de publier une image sur un registre Docker pour pouvoir travailler dans le cadre de cet exercice.
+Je ne comprend le systéme de tag et comment pousser sur le docker hub
+Les tags constituent que la version de l'image. Par exemple, tu peux construire :
+une image de la version de ton application aujourd'hui : docker build -t monapplication:1.0 .
+... puis une version 1.1 de ton application demain : docker build -t monapplication:1.1 .
+Si aucun tag n'est précisé lors du build (docker build -t monapplication .), alors le tag latest est utilisé.
+Lors d'une montée de version, on peut alors "tagger" celle-ci en indiquant qu'il s'agit de la dernière version : docker tag monapplication:1.1 monapplication:latest.
+Le tag latest fait alors référence à la version 1.1 de notre application...
+Comment Utiliser EXPOSE et les VOLUME ? quels sont leur utilité ?
+Il n'est pas nécessaire d'utiliser ces instructions au sein du Dockerfile pour le fonctionnement de l'image. EXPOSE indique le port d'écoute du conteneur, mais n'est pas nécessaire.
+Concentre-toi de préférence à l'exécution (avec la commande docker run (...) et non dans le Dockerfile sur la façon de :
+monter les volumes du host vers le conteneur
+forward les ports du conteneur vers la machine host
+Je te fais un retour sur le Dockerfile et le docker-compose dès que possible.
+
+Idéalement, pour fluidifier les échanges, je t'invite à publier ton code sur Github.
+------
+- Question bloquage - 
+Comment mettre un Dockerfille dans le docker hub?
+Je ne comprend le systéme de tag et comment pousser sur le docker hub
+
+Comment Utiliser EXPOSE et les Volume? quels sont leur utilité?
+J'ai du mal a consctruire et crée des Dockerfiles, il a t'il d'autre site pour m'aider à écrire, Notamment en terme de synthaxe et comprehension
+je bloque sur la mise en place du serveur httpd. 
+
+Création d'un image Hub  ?
+
+Actuellement j'ai mis dans le Dockerfille ceci :
+
+'
+FROM nginx
+
+RUN apt-get update -yq \
+&& apt-get install curl gnupg -yq \
+&& curl -sL https://deb.nodesource.com/setup_10.x | bash \
+&& apt-get install nodejs -yq \
+&& apt-get clean -y
+
+ADD . /database
+ADD . /php
+ADD . /sql
+
+WORKDIR .
+
+CMD npm run start
+
+COPY ["./adds/index.html", "/usr/share/debian/html/"]
+COPY ["./adds/index.html", "/usr/share/mysql/html/"]
+COPY ["./adds/index.html", "/usr/share/mariadb/html/"]
+COPY ["./adds/index.html", "/usr/share/phpmyadmin/html/"] 
+COPY ["./adds/index.html", "/usr/share/httpd/html/"] 
+'
+Le probleme c'est que je vois pas si c'est pertinent de faire ainsi, j'ai fait ceci selon le cours Open Classroom pour l'usage 
+
+docker-compose.yml
+'
+version: "2"
+services:
+  db:
+      image: mariadb
+      environment:
+          - MYSQL_ROOT_PASSWORD=test
+          - MYSQL_DATABASE=radio
+      volumes:
+          - ./database:/var/lib/mysql
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      restart: always
+      ports:
+          - 8282:80
+      links:
+          - db
+'
+

@@ -1,0 +1,17 @@
+version: "2"
+services:
+  db:
+      image: mariadb
+      environment:
+          - MYSQL_ROOT_PASSWORD=test
+          - MYSQL_DATABASE=radio
+      volumes:
+          - ./database:/var/lib/mysql
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      restart: always
+      ports:
+          - 8282:80
+      links:
+          - db
