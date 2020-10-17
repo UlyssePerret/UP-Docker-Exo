@@ -1,13 +1,13 @@
 Auteur : Ulysse Perret
-Dernier version : V1.6
+Dernier version : V1.7
 Date de création : Samedi 12 Septembre 2020
-Date de modification : Dimanche 4 octobre
+Date de modification : samedi 17 octobre
 
 Structure du projet
 
 Sur la racine sont present
 Les fichiers :
-*Readme.txt : fichier que vous lisez actuellement
+* Readme.txt : fichier que vous lisez actuellement
 * docker-compose.yml -> décrivant l’orchestration de l’exécution des containeurs.
 * Dockerfile -> description d’image ;
 * Exercice_Docker.pdg -> Sujet
@@ -33,13 +33,24 @@ Etape installation du proejt:
 - Sur le terminal lancer : docker-compose up
 - ajouter la base de données SQL ProjetSQL.sql (dans le dossier sql)
 -aller sur le localhost, Login : root, passwort : test;
-Reppalle adresse sql : http://localhost:8282/db_structure.php?server=1&db=projetSql
+Rappel  adresse sql : http://localhost:8282/db_structure.php?server=1&db=projetSql
 
 Une fois fini vous pouvez nettoyer les images docker avec docker system prune
 rappel :  docker rm -f $(docker ps -aq) -> Pour forcer a quitter les porcet
+ps : chemin absolu/pwd : /Users/ulysse/Desktop/Formation et Cours/Formation dev/Cergy pontois/LP/Racouci Exo LP/Docker/UP-Docker-Exo
+
+Rappel plu
 
 Changelog - Avancement et Aide pour suivi de l'exercice
+V.7 -16-17 octobre
+Prise en compte mail
+-> Metter sur Github
+https://github.com/UlyssePerret/UP-Docker-Exo
+-> Test mise sur hub docker 
+(En cours
 
+Test build
+ 
 V.1.6
 Reprise du projet
 Test Dockerfile/
