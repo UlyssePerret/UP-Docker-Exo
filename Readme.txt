@@ -33,10 +33,12 @@ install docker sur Windows Home : https://docs.docker.com/docker-for-windows/ins
 - Aller grâce à pwd sur l'architecture et aller au dossier exercice  où se trouve ce fichier et le Dockerfile (racine)
  
 )
+- Sur le terminal lancer :docker build -t updockerexo  .
 - Sur le terminal lancer : docker-compose up
 - ajouter la base de données SQL ProjetSQL.sql (dans le dossier sql)
 -aller sur le localhost, Login : root, password : test;
 Rappel  adresse sql : http://localhost:8282/db_structure.php?server=1&db=projetSql
+ 
 
 Une fois fini vous pouvez nettoyer les images docker avec docker system prune
 rappel :  docker rm -f $(docker ps -aq) -> Pour forcer a quitter les porcet
