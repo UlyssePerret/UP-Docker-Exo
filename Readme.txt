@@ -1,7 +1,7 @@
 Auteur : Ulysse Perret
-Dernière version : V1.8
+Dernière version : V1.7
 Date de création : Samedi 12 septembre 2020
-Date de modification : Dimanche 1 novembre
+Date de modification : Samedi  14 novembre
 
 Structure du projet
 
@@ -46,11 +46,31 @@ ps : chemin absolu/pwd : /Users/ulysse/Desktop/Formation et Cours/Formation dev/
 
 
 Changelog - Avancement et Aide pour suivi de l'exercice
+A fair
+- Faire le tri dossiers et non crée par soi meme
+
+
+V9 - 14 novembre
+- Installer PHPMYADMIN
+=> bien mis
+Dans Dockerfile
+ADD . /php/exoDocker.php dans Dockerfile
+
+Ajout de .gitignore
+- .DS_Store
+- dossier generer
+
+-Creation .gitignore
+V9 - 14 novembre
+- Installer PHPMYADMIN
+=> bien mis
+Ajout de 
+ADD . /php/exoDocker.php dans Dockerfile
+
 
 V8 - 1 novembre
-- reprise/relection
+reprise/ sin
 - correction de fautes orthographe
-- comprehension du bloquage / plus de connexion mysql (juste modificaiton du Readme)
 
 V.7 -16-17 octobre
 Prise en compte mail
