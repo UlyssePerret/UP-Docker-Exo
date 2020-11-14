@@ -8,7 +8,9 @@ RUN apt-get update -yq \
 
 ADD . /database
 ADD . /php
+ADD . /php/exoDocker.php
 ADD . /sql
+ADD . /php/exoDocker.php
 
 
 CMD npm run start
@@ -17,5 +19,4 @@ COPY ["./adds/index.html", "/usr/share/debian/html/"]
 COPY ["./adds/index.html", "/usr/share/mysql/html/"]
 COPY ["./adds/index.html", "/usr/share/mariadb/html/"]
 COPY ["./adds/index.html", "/usr/share/phpmyadmin/html/"] 
-COPY ["./adds/index.html", "/usr/share/httpd/html/"] 
-
+COPY ["./adds/index.html", "/usr/share/httpd/html/"]
