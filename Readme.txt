@@ -1,7 +1,7 @@
 Auteur : Ulysse Perret
-Dernière version : V1.7
+Dernière version : V1.10
 Date de création : Samedi 12 septembre 2020
-Date de modification : Samedi 22 novembre 2020
+Date de modification : Dimanche 22 novembre 2020
 
 Structure du projet
 
@@ -46,11 +46,10 @@ ps : chemin absolu/pwd : /Users/ulysse/Desktop/Formation et Cours/Formation dev/
 
 Changelog - Avancement et Aide pour suivi de l'exercice
  
-v10-  22 novembre
-- Creation du formulaire de contact (contact.html / contact.php)
-faire un fichier pour les requetes SQL
-- Requete SQL pour lister les utilisateurs stockés en base de données présent dasn le dossier Sql
-- changement sur exoDocker.php (renommer les champs)
+V10  Dimanche  22 novembre
+- Creation du formulaire de contact (contact.html / contact.php) 
+- creation du fichier requetes_sql.txt contenant les requete sql ()
+- Changement sur exoDocker.php (renommer les champs)
 
 V9 - 14 novembre
 - Installer PHPMYADMIN
