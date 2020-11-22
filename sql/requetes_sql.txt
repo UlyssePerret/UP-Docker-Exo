@@ -1,0 +1,17 @@
+Requete SQl
+ce fichier est la pour tester les requetes rentrer dans la base de données SQL 
+L'objectif et de faire Requete pour lister les utilisateurs stockés en base de données.
+
+Requete pour lister les utilisateurs stockés sur la table Users
+SELECT * FROM `Users` : pour la table complete
+
+Selection le nom, prenom, email sur la table Users
+SELECT `firtname`,`lastname`,`email`  FROM `Users`
+
+Selection des utilsiateur dans latable Contacts
+SELECT * FROM `Contacts`
+Selection le nom, prenom, email  sur la table Contacts
+SELECT `firstname`,`lastname`,`User_email` FROM `Contacts`
+
+Requete pour lister les utilisateurs stockés en base de données commune aux deux tables User et Contact
+SELECT * FROM Users INNER JOIN Contacts ON Users.ID = Contacts.`User_id`
