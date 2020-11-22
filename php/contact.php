@@ -18,7 +18,8 @@ catch (Exception $e) {
 ?>
 <form id="contact" method="post" action="traitement_formulaire.php">
 	<fieldset><legend>Fom</legend>
-		<p><label for="nom">Nom :</label><input type="text" id="nom" name="nom" /></p>
+		<p><label for="firstname">Nom :</label><input type="text" id="firstname" name="firstname" /></p>
+		<p><label for="lastname">lastname :</label><input type="text" id="lastname" name="lastname" /></p>
 		<p><label for="email">Email :</label><input type="text" id="email" name="email" /></p>
 	</fieldset>
  
