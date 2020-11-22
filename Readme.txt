@@ -1,7 +1,7 @@
 Auteur : Ulysse Perret
 Dernière version : V1.7
 Date de création : Samedi 12 septembre 2020
-Date de modification : Samedi  14 novembre
+Date de modification : Samedi 22 novembre 2020
 
 Structure du projet
 
@@ -42,13 +42,15 @@ Rappel  adresse sql : http://localhost:8282/db_structure.php?server=1&db=projetS
 
 Une fois fini vous pouvez nettoyer les images docker avec docker system prune
 rappel :  docker rm -f $(docker ps -aq) -> Pour forcer a quitter les porcet
-ps : chemin absolu/pwd : /Users/ulysse/Desktop/Formation et Cours/Formation dev/Cergy pontois/LP/Racouci Exo LP/Docker/UP-Docker-Exo
-
+ps : chemin absolu/pwd : /Users/ulysse/Desktop/Formation et Cours/Formation dev/Cergy pontois/LP/Docker/Exercice/UP-Docker-Exo
 
 Changelog - Avancement et Aide pour suivi de l'exercice
-A fair
-- Faire le tri dossiers et non crée par soi meme
-
+ 
+v10-  22 novembre
+- Creation du formulaire de contact (contact.html / contact.php)
+faire un fichier pour les requetes SQL
+- Requete SQL pour lister les utilisateurs stockés en base de données présent dasn le dossier Sql
+- changement sur exoDocker.php (renommer les champs)
 
 V9 - 14 novembre
 - Installer PHPMYADMIN
